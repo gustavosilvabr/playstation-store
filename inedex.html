@@ -12,15 +12,15 @@
  <div class="navbar">
         <img class="logo" src="imagens/logo.png" alt="logo Playstation">
         <nav>
-            <ul>
+            <ul id="menu-list">
                 <h2></h2>
-                    <li><a href="#">Acessorios</a></li>
-                    <li><a href="#">Controles</a></li>
-                    <li><a href="#">Consoles</a></li>
-                    <li><a href="#">Outros</a></li>
-              
+                <li class="nav-li"><a href="#">Acessorios</a></li>
+                <li class="nav-li"><a href="#">Controles</a></li>
+                <li class="nav-li"><a href="#">Consoles</a></li>
+                <li class="nav-li"><a href="#">Outros</a></li>
             </ul>
         </nav>
+        <img class="menu-icon" src="imagens/menu.png" alt="menu"    onclick="showMenu()">
     </div>
     <div class="row">
         <div class="column-1">
@@ -28,7 +28,7 @@
               <h3>Wireles Controller for Playstation</h3>
               <p>Controle Original</p>
               <h4>R$ 222,50</h4>
-              <button class="buy">Comprar agora</button>
+              <button  class="buy">Comprar agora <img src="imagens/arrow.png" alt="arrow"></button>
         </div>
         <div class="column-2">
             <img class="img1" src="imagens/controller.png" alt="controller">
@@ -45,4 +45,17 @@
     </div>
     </div>
 </body>
+<script>
+    const menuList=document.getElementById("menu-list")
+    menuList.style.maxHeight ="0px"
+    function showMenu(){
+           if(menuList.style.maxHeight == "0px"){
+              menuList.style.maxHeight="120px"
+    }else{
+        menuList.style.maxHeight ="0px"
+    }
+
+    }
+ 
+</script>
 </html>
